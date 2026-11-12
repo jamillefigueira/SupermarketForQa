@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Supermarket for QA</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Supermarket for QA</h1>
+      <p>Your online grocery store</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Welcome section -->
+      <section id="home">
+        <h2>Welcome to Supermarket for QA!</h2>
+        <p>Everything you need, all in one place.</p>
+      </section>
+
+      <!-- Cart button -->
+      <button id="open-cart-button">
+        🛒 View Cart (<span id="cart-count">0</span>)
+      </button>
+
+      <!-- Product Search Bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="product-search"
+          placeholder="Search for products..."
+        />
+
+        <button id="search-button">Search</button>
+      </div>
+
+      <!-- Products section -->
+      <section id="products">
+        <h2>Our Products</h2>
+
+        <div id="product-list">
+          <div
+            class="product-card"
+            data-description="Fresh whole milk, perfect for breakfast and everyday use."
+          >
+            <img src="images/milk.png" alt="Whole Milk" />
+            <h3>Whole Milk</h3>
+            <p>Price: €1.29</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Delicious canned soup, perfect for a quick meal."
+          >
+            <img src="images/soup.png" alt="Canned Soup" />
+            <h3>Canned Soup</h3>
+            <p>Price: €0.49</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Delicious maple syrup, perfect for pancakes and waffles."
+          >
+            <img src="images/syrup.png" alt="Maple Syrup" />
+            <h3>Maple Syrup</h3>
+            <p>Price: €1.99</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Refreshing cherry soda, perfect for a cool drink."
+          >
+            <img src="images/soda.png" alt="Cherry Soda" />
+            <h3>Cherry Soda</h3>
+            <p>Price: €0.99</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Freshly baked bread, perfect for sandwiches and toast."
+          >
+            <img src="images/bread.png" alt="Fresh Bread" />
+            <h3>Fresh Bread</h3>
+            <p>Price: €1.50</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Creamy butter, perfect for cooking and baking."
+          >
+            <img src="images/butter.png" alt="Butter" />
+            <h3>Butter</h3>
+            <p>Price: €2.00</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Freshly picked apples, perfect for snacking and baking."
+          >
+            <img src="images/apples.png" alt="Fresh Apples" />
+            <h3>Fresh Apples</h3>
+            <p>Price: €1.80</p>
+            <button>Add to Cart</button>
+          </div>
+
+          <div
+            class="product-card"
+            data-description="Fresh farm eggs, perfect for cooking and baking."
+          >
+            <img src="images/eggs.png" alt="Farm Eggs" />
+            <h3>Farm Eggs</h3>
+            <p>Price: €2.49</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Details Modal -->
+      <div id="product-modal" class="modal">
+        <div class="modal-content product-modal-content">
+          <div class="modal-header">
+            <h2 id="product-modal-title">Product Details</h2>
+
+            <button id="close-product-modal">&times;</button>
+          </div>
+
+          <img id="product-modal-image" src="" alt="" />
+
+          <p id="product-modal-description"></p>
+
+          <h3 id="product-modal-price"></h3>
+
+          <!-- Add to Cart Button -->
+        <button id="add-to-cart-modal-button">
+            Add to Cart
+        </button>
+        </div>
+      </div>
+
+      <!-- Cart Modal -->
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Shopping Cart</h2>
+            <button id="close-cart-button">&times;</button>
+          </div>
+
+          <div id="cart-items">Your cart is empty.</div>
+
+          <div class="cart-footer">
+            <h3>Total: €<span id="cart-total">0.00</span></h3>
+
+            <button id="checkout-button">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Supermarket for QA. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
